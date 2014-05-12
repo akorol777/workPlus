@@ -1,6 +1,10 @@
 $blue: #01baf0
+$light: #303030
 body, html
 	height: 100%
+	font-family: sans-serif 
+a
+	+transition (0.3s)	
 .container
 	margin: 0 auto
 	width: 970px
@@ -11,49 +15,100 @@ body, html
 	+clr
 	+box
 .h3
+	font-size: 20px
+	line-height: 20px 
 .link
+	color: #0272BC 
+	font-size: 13px
+	line-height: 13px
+	&:hover
+		text-decoration: none
 .link-dark
+	color: #656764
+	font-size: 12px
+	line-height: 12px 
+.link_more
+	position: relative
+	&:after
+		position: absolute
+		content: "→"
+		top: 15%
+		right: -20px
 .text
+	font-size: 16px
+	line-height: 23px
 .list	
+	list-style-image: url(../img/icons/i-star.png)
+	line-height: 28px
+	margin-left: 36px 
+	li
+		padding-left: 8px
 /*-----header----------------------------------------*/	
 .header
 	+clr
+	padding: 20px 0 24px 0 
 .header__left
 	float: left
 .header__right
 	float: right
 .header__center
 	overflow: hidden				
+	padding-bottom: 11px
 /*-----headline----------------------------------------*/	
 .headline
 	background: $blue 
 .headline__text	
+	color: #fff
+	font-size: 20px
+	line-height: 40px 
 /*-----main----------------------------------------*/	
 .main
 	+clr
+	padding-top: 35px
+	margin-bottom: 51px
 .main__left
 	float: left
-	width: 50%
+	width: 49%
+	.h3
+		margin-bottom: 24px
+	.text
+		margin-bottom: 5px
+	.list
+		margin-bottom: 9px		
 .main__right
 	float: left
-	width: 50%		
+	width: 51%
+	.h3, .link
+		margin-left: 9px		
+	.h3
+		margin-bottom: 25px	
+	.link
+		margin-left: 19px	
 /*-----banner----------------------------------------*/	
 .banner
+	margin-bottom: 20px
 	.banner-in
-		+box
-		height: 90px
+		height: 92px
 		width: 945px
 		line-height: 90px
 		text-align: center
 		vertical-align: middle
-		background: #666
 		margin: 0 auto 
+		border: 1px solid #E2E2E2 
+		color: #ECEAEB
+		font-size: 18px 
+		+box		
+		margin-bottom: 2px
 /*-----footer----------------------------------------*/	
 .footer
 	background: #f9f9f9
 	height: 102px
 	margin-top: -102px 
-	+box
+	padding-top: 22px 
+	color: #656565 
+	+box	
+.footer-psevdo
+	height: 102px	
 //////////////////////////////////////////////////
 /*-----logo-----*/	
 .logo
@@ -62,28 +117,171 @@ body, html
 	width: 75px
 	display: inline-block
 	background: url(../img/logo.png) no-repeat 
+	vertical-align: bottom
 /*-----nav-----*/
 .nav
 	+clr
+	margin: 14px 0 0 36px
 	li
 		float: left
-		margin-left: 5%
+		margin-left: 14px
+		padding: 0 15px
+		+box
+		height: 44px
+		line-height: 44px 
+		+border-radius(4px) 
+		position: relative
+		+transition(0.3s)
 		&:first-child
 			margin-left: 0
-	a
-	.is-active
-		a
+		&:hover
 			background: $blue 
+			a
+				color: #FFF 
+		&:active
+			background: #FF0
+			+transform (scale(.95))
+			background: $blue + $light		
+	a
+		color: #0171B9
+		font-size: 18px
+		line-height: 18px 
+	.is-active
+		background: $blue	
+		&:after
+			position: absolute
+			content: ""
+			bottom: -11px
+			left: 43%
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 11px 8px 0 8px
+			border-color: $blue transparent transparent transparent
+		a
+			font-size: 20px
+			line-height: 18px
+			color: #FFF  
 /*-----enter-----*/
 .enter
-	width: 175px 		
+	width: 175px
+	font-size: 12px
+	line-height: 12px
+	padding: 5px 16px 0 0 
+.enter__account, .enter__reg	
+	text-decoration: none
+	border-bottom: 1px dashed  	 		
 .enter__account
+	line-height: 32px 
+	color: #FA07B9 
+	&:hover
+		color: #FA07B9 + $light*2
 .enter__reg		
+	color: #A798B7 
+	&:hover
+		color: #A798B7 + $light	
 /*-----slider-----*/
+.slider
+	margin-bottom: 10px
+	margin-bottom: 7px
+	position: relative
+.cycle-slideshow
+	width: 456px
+	margin: 0 auto 
+.slider__item
+	height: 106px
+	width: 100%
+	display: inline-block
+	left: 3px
+	overflow: hidden
+	background: #aaa 
+	+border-radius(5px)
+	+box
+	+cover
+.slider__item-1
+	background: url(../img/special.jpg)  
+.slider__item-2
+	background: url(../img/special_2.jpg)  
+.slider__item-3
+	background: url(../img/special_3.jpg)  
+.slider__content
+	background: $blue 
+	background: rgba(0,0,0,0.5) 
+	margin-top: 49px
+	height: 100%
+	padding: 11px 10px 10px 15px 
+	+clr	
+.slider__left
+	float: left
+	width: 50%
+	+box
+.slider__right
+	float: right
+	width: 135px
+	+box
+.slider__title
+	color: #FFF  
+	font-weight: bold
+	font-size: 18px
+	line-height: 18px
+.slider__company
+	color: #FFF
+	font-size: 14px
+	line-height: 20px 
+.slider__salary	
+	color: #FEF102
+	font-weight: bold
+	font-size: 18px
+	line-height: 18px	
+.slider__other
+	color: #fff 
+	font-size: 12px
+	line-height: 22px	 
+.slider__prev, .slider__next
+	display: inline-block
+	position: absolute
+	top: 44px
+	cursor: pointer
+	&:hover
+		+opacity(.8)
+	&:active
+		+opacity(.5)	
+.slider__prev
+	+s(i-prev)
+	left: -1px 
+.slider__next
+	+s(i-next)
+	right: 1px 
 /*-----copyright-----*/
 .copyright
+	font-size: 12px
+	line-height: 12px
+	margin-bottom: 17px
 /*------phone-----*/
 .phone
+	font-size: 12px
+	line-height: 12px
+	margin-bottom: 6px
+	.link
+		color: #656566
+		text-decoration: none	 
+		font-size: 12px
+		line-height: 12px	
 /*-----mail-----*/
 .mail
+	font-size: 12px
+	line-height: 12px
+	.link
+		color: #656565
+		font-size: 12px
+		line-height: 12px	 
 
+
+/*-----ico-----*/
+.ico
+	display: inline-block
+.i-closed_pink
+	+s(i-closed_pink)	
+	margin-left: -13px
+	vertical-align: sub
+	margin: 0 15px 0 -29px 
