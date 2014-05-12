@@ -7,16 +7,15 @@
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<script src="js/app.js"></script>
-
 	<script src="js/app.js"></script>
 	<script src="js/jquery.js"></script>
 	<script src="js/cycle.js"></script>	
 	<script type="text/javascript" src="js/jcarouse.js"></script>
 	<script src="js/common.js"></script>
-
 </head>
 <body>
 	<div class="wrap">
+	<!--BEGIN header-->	
 		<div class="header">
 			<div class="container">
 				<div class="header__left">
@@ -38,6 +37,8 @@
 				</div>
 			</div>
 		</div>
+	<!--/.header-->	
+	<!--BEGIN headline-->	
 		<div class="headline">
 			<div class="container">
 				<div class="headline__text">
@@ -45,6 +46,8 @@
 				</div>
 			</div>
 		</div>	
+	<!--/.headline-->	
+	<!--BEGIN main-->	
 		<div class="main">
 			<div class="container">
 				<div class="main__left">
@@ -58,73 +61,78 @@
 					<a href="#" class="link link_more">Узнать о всех преимуществах</a>
 				</div>
 				<div class="main__right">
-					<h3 class="h3">Спецпредложения</h3>
-					
-	<!-- BEGIN slider -->
-		<div class="slider">
-				<div class="cycle-slideshow"
-				data-cycle-slides="> .slider__item"
-				data-cycle-pager=".slider__pager"
-				data-cycle-prev=".slider__prev"
-				data-cycle-next=".slider__next"
-				data-pause-on-hover="true"
-				>
-					<div class="slider__item slider__item-1">
-						<div class="slider__content">
-							<div class="slider__left">
-								<div class="slider__title">Работники на стройку</div>
-								<div class="slider__company">Киевжитлобуд</div>
+					<h3 class="h3">Спецпредложения</h3>				
+					<!-- BEGIN slider -->
+						<div class="slider">
+							<div class="cycle-slideshow"
+								data-cycle-slides="> .slider__item"
+								data-cycle-pager=".slider__pager"
+								data-cycle-prev=".slider__prev"
+								data-cycle-next=".slider__next"
+								data-pause-on-hover="true"
+								>
+								<div class="slider__item slider__item-1">
+									<div class="slider__content">
+										<div class="slider__left">
+												<div class="slider__title">Работники на стройку</div>
+												<div class="slider__company">Киевжитлобуд</div>
+										</div>
+										<div class="slider__right">
+												<div class="slider__salary">7000 грн./мес</div>
+												<div class="slider__other">(+ премии)</div>
+										</div>
+									</div>
+								</div>
+								<div class="slider__item slider__item-2">
+									<div class="slider__content">
+										<div class="slider__left">
+											<div class="slider__title">Уборщицы</div>
+											<div class="slider__company">Клинер</div>
+										</div>
+										<div class="slider__right">
+											<div class="slider__salary">5000 грн./мес</div>
+											<div class="slider__other">(+ премии)</div>
+										</div>
+									</div>
+								</div>
+								<div class="slider__item slider__item-3">
+									<div class="slider__content">
+										<div class="slider__left">
+											<div class="slider__title">Логисты</div>
+											<div class="slider__company">Транспортная фирма</div>
+										</div>
+										<div class="slider__right">
+											<div class="slider__salary">2000 грн./мес</div>
+											<div class="slider__other">(+ обед)</div>
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="slider__right">
-								<div class="slider__salary">7000 грн./мес</div>
-								<div class="slider__other">(+ премии)</div>
-							</div>
+							<i class="slider__prev"></i>
+							<i class="slider__next"></i>
 						</div>
-					</div>
-					<div class="slider__item slider__item-2">
-						<div class="slider__content">
-							<div class="slider__left">
-								<div class="slider__title">Уборщицы</div>
-								<div class="slider__company">Клинер</div>
-							</div>
-							<div class="slider__right">
-								<div class="slider__salary">5000 грн./мес</div>
-								<div class="slider__other">(+ премии)</div>
-							</div>
-						</div>
-					</div>
-					<div class="slider__item slider__item-3">
-						<div class="slider__content">
-							<div class="slider__left">
-								<div class="slider__title">Логисты</div>
-								<div class="slider__company">Транспортная фирма</div>
-							</div>
-							<div class="slider__right">
-								<div class="slider__salary">2000 грн./мес</div>
-								<div class="slider__other">(+ обед)</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<i class="slider__prev"></i>
-				<i class="slider__next"></i>
-		</div>
-	<!-- / .slider -->
-
-					<a href="#" class="link link_more">Посмотреть остальные 12 спецпредложений</a>
+					<!-- / .slider -->
+						<a href="#" class="link link_more">Посмотреть остальные 12 спецпредложений</a>
 				</div>
 			</div>
 		</div>
+	<!--/.main-->	
+	<!--BEGIN banner-->	
 		<div class="banner">
 			<div class="container">
 				<div class="banner-in">
-					Баннер 945*90 px
+					<!--Баннер 945*90 px-->
+					<img src="img/banner.jpg" alt="Баннер 945*90 px">
 				</div>
 				<a href="#" class="link link-dark">Реклама на сайте</a>	
 			</div>
 		</div>
+	<!--/.banner-->	
+	<!--BEGIN footer-psevdo-->
 		<div class="footer-psevdo"></div>
-	</div>	
+	<!--/.footer-psevdo-->	
+	</div>
+<!--BEGIN footer-->		
 	<div class="footer">
 		<div class="container">
 			<div class="copyright">Rablotaplus.ua © 2014 Все права защищены</div>
@@ -132,6 +140,10 @@
 			<div class="mail"><strong>Эл. почта</strong><a href="mailto:support@rabotaplus.ua" class="link"> support@rabotaplus.ua</a> </div>
 		</div>
 	</div>
+<!--/.footer-->	
+<!--<div class="test">
+	test
+</div>-->
 
 
 

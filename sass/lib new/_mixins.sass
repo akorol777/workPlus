@@ -1,16 +1,109 @@
 // responsive example, edit or remove
-$breaksmall: 500px
 
-$breaklarge: 1180px
+// $breaksmall: 500px
+
+// $breaklarge: 1180px
+
+// =r($media)
+// 	@if $media == pda
+// 		// narrower than $width
+// 		@media only screen and (max-width: $breaksmall)
+// 			@content
+// 	@else if $media == wide
+// 		// wider than $width
+// 		@media only screen and (min-width: $breaklarge)
+// 			@content
+
+// responsive example, edit or remove
+// just write +r(w1280)
+$min1920: 1920px
+$w1280: 1280px
+$w1270: 1270px
+$w1024: 1024px
+$w900: 900px
+$w860: 860px
+$w800: 800px    
+$w760: 760px
+$w640: 640px
+$w560: 560px
+$w480: 480px
+$w360: 360px
+$w320: 320px
+
+$w991: 991px
+$w767: 767px
+$w479: 479px
+
+$w1055: 1055px
+$w800: 800px
+$w505: 505px
+
+
+
+
+
 
 =r($media)
-	@if $media == pda
-		// narrower than $width
-		@media only screen and (max-width: $breaksmall)
+
+	@if $media == w1055
+		@media only screen and (max-width: $w1055)
 			@content
-	@else if $media == wide
-		// wider than $width
-		@media only screen and (min-width: $breaklarge)
+	@if $media == w800
+		@media only screen and (max-width: $w800)
+			@content
+	@if $media == w505
+		@media only screen and (max-width: $w505)
+			@content						
+
+	@if $media == w991
+		@media only screen and (max-width: $w991)
+			@content
+	@if $media == w767
+		@media only screen and (max-width: $w767)
+			@content
+	@if $media == w479
+		@media only screen and (max-width: $w479)
+			@content
+
+
+	@if $media == w1280
+		@media only screen and (max-width: $w1280)
+			@content
+	@if $media == w1270
+		@media only screen and (max-width: $w1270)
+			@content
+	@if $media == w1024
+		@media only screen and (max-width: $w1024)
+			@content
+	@if $media == w900
+		@media only screen and (max-width: $w900)
+			@content
+	@if $media ==w860
+		@media only screen and (max-width: $w860)
+			@content
+	@if $media == w800
+		@media only screen and (max-width: $w800)
+			@content
+	@if $media == w760
+		@media only screen and (max-width: $w760)
+			@content
+	@if $media == w640
+		@media only screen and (max-width: $w640)
+			@content
+	@if $media == w560
+		@media only screen and (max-width: $w560)
+			@content
+	@if $media == w480
+		@media only screen and (max-width: $w480)
+			@content
+	@if $media == w360
+		@media only screen and (max-width: $w360)
+			@content 
+	@if $media == w320
+		@media only screen and (max-width: $w320)
+			@content
+	@if $media == min1920
+		@media only screen and (min-width: $min1920)
 			@content
 
 =fs($sizeValue: 16)
@@ -23,11 +116,19 @@ $breaklarge: 1180px
 	text-overflow: ellipsis
 	white-space: nowrap
 
+=ie
+	*display: inline
+	*zoom: 1
+
 =cover
 	background-repeat: no-repeat
 	background-size: cover
 	background-position: 50% 50%
-
+	
+=background-size($width: 100%, $height: 100%)
+	-moz-background-size: $width $height
+	-webkit-background-size: $width $height
+	background-size: $width $height 
 // retina bg
 =retina
 	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
@@ -91,8 +192,10 @@ $breaklarge: 1180px
 	*zoom: 1
 
 =placeholder-color($color)
-	&:-moz-placeholder
+	&:-moz-placeholder,
+	&::-moz-placeholder
 		color: $color
+		opacity: 1
 	&::-webkit-input-placeholder
 		color: $color
 
@@ -174,35 +277,19 @@ $breaklarge: 1180px
 	transform: rotate(0.05deg)
 
 =scrollbar
-	& ::-moz-scrollbar
-		@content
-	& ::-webkit-scrollbar
-		@content
-	& ::scrollbar
+	&::-webkit-scrollbar
 		@content
 
 =scrollbar-track
-	& ::-moz-scrollbar-track
-		@content
-	& ::-webkit-scrollbar-track
-		@content
-	& ::scrollbar-track
+	&::-webkit-scrollbar-track
 		@content
 
 =scrollbar-thumb
-	& ::-moz-scrollbar-thumb
-		@content
-	& ::-webkit-scrollbar-thumb
-		@content
-	& ::scrollbar-thumb
+	&::-webkit-scrollbar-thumb
 		@content
 
 =scrollbar-track-piece
-	& ::-moz-scrollbar-track-piece
-		@content
-	& ::-webkit-scrollbar-track-piece
-		@content
-	& ::scrollbar-track-piece
+	&::-webkit-scrollbar-track-piece
 		@content
 
 //triangle
@@ -238,85 +325,15 @@ $breaklarge: 1180px
 // example
 // +arr(500,50, #000, l)
 // +arr(500,50, #000, bl)
-
-
-
-// responsive example, edit or remove
-// just write +r(w1280)
-$min1920: 1920px
-$w1280: 1280px
-$w1270: 1270px
-$w1024: 1024px
-$w900: 900px
-$w860: 860px
-$w800: 800px    
-$w760: 760px
-$w640: 640px
-$w560: 560px
-$w480: 480px
-$w360: 360px
-$w320: 320px
-
-$w992: 992px
-$w479: 479px
-
-
-
-
-
-
-
-
-=r($media)
-					
-
-	@if $media == w992
-		@media only screen and (max-width: $w992)
-			@content
-	@if $media == w767
-		@media only screen and (max-width: $w767)
-			@content
-	@if $media == w479
-		@media only screen and (max-width: $w479)
-			@content
-
-
-	@if $media == w1280
-		@media only screen and (max-width: $w1280)
-			@content
-	@if $media == w1270
-		@media only screen and (max-width: $w1270)
-			@content
-	@if $media == w1024
-		@media only screen and (max-width: $w1024)
-			@content
-	@if $media == w900
-		@media only screen and (max-width: $w900)
-			@content
-	@if $media ==w860
-		@media only screen and (max-width: $w860)
-			@content
-	@if $media == w800
-		@media only screen and (max-width: $w800)
-			@content
-	@if $media == w760
-		@media only screen and (max-width: $w760)
-			@content
-	@if $media == w640
-		@media only screen and (max-width: $w640)
-			@content
-	@if $media == w560
-		@media only screen and (max-width: $w560)
-			@content
-	@if $media == w480
-		@media only screen and (max-width: $w480)
-			@content
-	@if $media == w360
-		@media only screen and (max-width: $w360)
-			@content 
-	@if $media == w320
-		@media only screen and (max-width: $w320)
-			@content
-	@if $media == min1920
-		@media only screen and (min-width: $min1920)
-			@content
+=rotate($var)
+	-ms-transform: rotate($var+deg)
+	-webkit-transform: rotate($var+deg)
+	transform: rotate($var+deg)
+	
+=blur($var)
+	-webkit-filter: blur($var)
+	filter: blur($var)
+=scale($var)
+	-ms-transform: scale($var)
+	-webkit-transform: scale($var)
+	transform: scale($var)

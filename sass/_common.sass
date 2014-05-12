@@ -10,6 +10,13 @@ a
 	width: 970px
 	+box
 	+clr
+	+r(w992)
+		width: 700px
+	+r(w760)
+		width: 480px 
+	+r(w560)
+		max-width: 360px
+		width: 100%  	
 .wrap	
 	min-height: 100%
 	+clr
@@ -49,11 +56,18 @@ a
 	padding: 20px 0 24px 0 
 .header__left
 	float: left
+	+r(w992)
+		float: none
+		text-align: center
 .header__right
 	float: right
+	+r(w992)
+		float: none
 .header__center
 	overflow: hidden				
 	padding-bottom: 11px
+	+r(w992)
+		text-align: center
 /*-----headline----------------------------------------*/	
 .headline
 	background: $blue 
@@ -66,6 +80,8 @@ a
 	+clr
 	padding-top: 35px
 	margin-bottom: 51px
+	+r(w992)
+		margin-bottom: 25px
 .main__left
 	float: left
 	width: 49%
@@ -74,21 +90,35 @@ a
 	.text
 		margin-bottom: 5px
 	.list
-		margin-bottom: 9px		
+		margin-bottom: 9px	
+	+r(w992)
+		float: none
+		width: 100%	
+		margin-bottom: 25px	
 .main__right
 	float: left
 	width: 51%
 	.h3, .link
-		margin-left: 9px		
+		margin-left: 9px
 	.h3
-		margin-bottom: 25px	
+		margin-bottom: 25px
+		+r(w992)
+			text-align: center							
 	.link
 		margin-left: 19px	
+		+r(w992)
+			margin-left: 0
+	+r(w992)
+		float: none
+		width: 100%	
 /*-----banner----------------------------------------*/	
 .banner
 	margin-bottom: 20px
+	+r(w760)
+		display: none
 	.banner-in
 		height: 92px
+		line-height: 92px
 		width: 945px
 		line-height: 90px
 		text-align: center
@@ -99,6 +129,11 @@ a
 		font-size: 18px 
 		+box		
 		margin-bottom: 2px
+		overflow: hidden
+		img 
+			max-height: 100%
+		+r(w992)
+			width: 100%	
 /*-----footer----------------------------------------*/	
 .footer
 	background: #f9f9f9
@@ -162,22 +197,31 @@ a
 			font-size: 20px
 			line-height: 18px
 			color: #FFF  
+	+r(w992)
+		display: inline-block
+		margin-left: 0		
 /*-----enter-----*/
 .enter
 	width: 175px
 	font-size: 12px
 	line-height: 12px
 	padding: 5px 16px 0 0 
+	+r(w992)
+		width: 100%
+		padding: 0
+		text-align: center 
 .enter__account, .enter__reg	
 	text-decoration: none
 	border-bottom: 1px dashed  	 		
 .enter__account
 	line-height: 32px 
 	color: #FA07B9 
+	margin-right: 10px
 	&:hover
 		color: #FA07B9 + $light*2
 .enter__reg		
-	color: #A798B7 
+	color: #A798B7
+	margin-left: 10px 
 	&:hover
 		color: #A798B7 + $light	
 /*-----slider-----*/
@@ -284,4 +328,18 @@ a
 	+s(i-closed_pink)	
 	margin-left: -13px
 	vertical-align: sub
-	margin: 0 15px 0 -29px 
+	margin: 0 15px 0 -29px
+	
+
+
+.test
+	position: absolute
+	bottom: 0px
+	background: #FF0 
+	width: 100%
+	+r(w992)
+		background: #F0F
+	+r(w760)
+		background: #00F 	
+	+r(w560)
+		background: #F00 	 		 	 
